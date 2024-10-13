@@ -19,7 +19,7 @@ import coil.load
 
 class FragmentDetailChampion : Fragment() {
     private  val repository: ChampionsRepository = InMemoryChampionsRepository.getInstance()
-    private val args: ChampionDetailFragmentArgs by navArgs()
+    private val args: FragmentDetailChampionArgs by navArgs()
     private lateinit var binding: ChampionDetailFragmentBinding
 
     override fun onCreateView(

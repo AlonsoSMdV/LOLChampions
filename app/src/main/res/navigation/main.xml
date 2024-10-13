@@ -2,8 +2,8 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main.xml"
-    app:startDestination="@layout/champion_detail_fragment">
+    android:id="@+id/main"
+    app:startDestination="@id/fragmentListChampion">
 
     <fragment
         android:id="@+id/fragmentListChampion"
@@ -11,14 +11,14 @@
         android:label="FragmentListChampion"
         tools:layout="@layout/champion_list_fragment">
         <action
-            android:id="@+id/action_ChampionListFragment_to_ChampionDetail"
-            app:destination="@+id/fragmentDetailChampion"/>
+            android:id="@+id/action_fragmentListChampion_to_fragmentDetailChampion"
+            app:destination="@+id/fragmentDetailChampion" />
     </fragment>
 
     <fragment
         android:id="@+id/fragmentDetailChampion"
         android:name="com.turing.alan.cpifp.ui.FragmentDetailChampion"
-        android:label="champion_detail_fragment"
+        android:label="FragmentDetailChampion"
         tools:layout="@layout/champion_detail_fragment" >
         <argument
             android:name="championId"

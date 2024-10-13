@@ -37,13 +37,16 @@ class FragmentListChampion : Fragment() {
         rv.adapter = adapter
         (rv.adapter as ChampionAdapter).submitList(repository.getChampions())
     }
+
     override fun onResume() {
         super.onResume()
         val rv = binding.championsList
         (rv.adapter as ChampionAdapter).submitList(repository.getChampions())
     }
-    private fun toItemDetail(champion: Champion){
+
+    private fun toItemDetail(champion: Champion) {
         val action = FragmentListChampionDirections
             .actionFragmentListChampionToFragmentDetailChampion(champion.id)
         findNavController().navigate(action)
     }
+}
