@@ -36,5 +36,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = ChampionAdapter(champions)
 
         recyclerView.adapter = adapter*/
+
+
     }
 }

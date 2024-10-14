@@ -33,15 +33,15 @@ class FragmentListChampion : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val adapter = ChampionAdapter(::toItemDetail)
-        val rv = binding.championsList
-        rv.adapter = adapter
-        (rv.adapter as ChampionAdapter).submitList(repository.getChampions())
+        val reciclerView = binding.championsList
+        reciclerView.adapter = adapter
+        (reciclerView.adapter as ChampionAdapter).submitList(repository.getChampions())
     }
 
     override fun onResume() {
         super.onResume()
-        val rv = binding.championsList
-        (rv.adapter as ChampionAdapter).submitList(repository.getChampions())
+        val reciclerView = binding.championsList
+        (reciclerView.adapter as ChampionAdapter).submitList(repository.getChampions())
     }
 
     private fun toItemDetail(champion: Champion) {
